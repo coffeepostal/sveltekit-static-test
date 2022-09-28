@@ -27,4 +27,9 @@
 <style lang="scss">
     article {
     }
+    hr {
+        border: 1px solid $color-primary;
+        width: 80%;
+        margin: 2rem auto;
+    }
 </style>

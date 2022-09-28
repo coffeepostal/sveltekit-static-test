@@ -192,34 +192,3 @@ footer {
     padding: 2rem 1rem 5rem;
     color: $color-white;
 }
-
-// FAQ Section
-dl {
-    dt,
-    dd {
-        margin-left: 2.75rem;
-
-        &:before {
-            position: absolute;
-            font-size: 2rem;
-            font-weight: 300;
-            margin-left: -2.5rem;
-        }
-    }
-    dt {
-        display: flex;
-        align-content: center;
-        font-weight: 400;
-        font-size: $font-h6-size;
-        line-height: 2rem;
-        margin-bottom: 1rem;
-        &:before {
-            content: "Q: ";
-        }
-    }
-    dd {
-        &:before {
-            content: "A: ";
-        }
-    }
-}

@@ -3,6 +3,7 @@
     import YouTube from "$lib/components/YouTube.svelte";
     import Modal from "$lib/components/Modal.svelte";
     import ResourceLink from "$lib/components/ResourceLink.svelte";
+    import FaqItem from "$lib/components/FaqItem.svelte";
     import * as cookies from "$lib/js/cookies.js";
 
     let showModal = false;
@@ -30,9 +31,7 @@
 {/if}
 
 <h1>Sex Ed</h1>
-<p>
-    Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
-</p>
+
 <YouTube
     id={"last-week-tonight"}
     url={"https://www.youtube.com/embed/L0jQz6jqQS0?start=1046"}
@@ -42,7 +41,7 @@
     <h5>Jump to Content:</h5>
     <ul>
         <li><a href="#resources">Local Resources</a></li>
-        <li><a href="#education">Education</a></li>
+        <!-- <li><a href="#education">Education</a></li> -->
         <li><a href="#faq">FAQ</a></li>
     </ul>
 </section>
@@ -65,14 +64,19 @@
         description={`Local reproductive health care, including: abortion, birth control, HIV services, men's health care, Morning-After pill (emergency contraception), pregnancy testing & services, primary care, STD testing, treatment & vaccines, and women's health care.`}
     />
 
-    <h4>PFLAG Skagit</h4>
-    <a href="https://www.pflagskagit.org/" target="_blank" class="button block"
-        >PFLAG Skagit Website</a
-    >
-    <!-- prettier-ignore -->
-    <p>Resources for parents, families, friends, and members of the LGBTQIA+ community.</p>
+    <ResourceLink
+        id={`pflag-skagit`}
+        title={`PFLAG Skagit`}
+        links={[
+            {
+                url: `https://www.pflagskagit.org/`,
+                text: `PFLAG Skagit Website`,
+            },
+        ]}
+        description={`Resources for parents, families, friends, and members of the LGBTQIA+ community.`}
+    />
 </section>
-<section id="education">
+<!-- <section id="education">
     <h2>Education</h2>
 
     <h4>For Teens</h4>
@@ -81,11 +85,15 @@
         target="_blank"
         class="button block">Planned Parenthood</a
     >
-    <hr />
-</section>
+</section> -->
 <section id="faq">
     <h2>F.A.Q.</h2>
-    <dl>
+    <FaqItem
+        id={`birth-control-condom`}
+        question={`If I'm on birth control, do I still need to use condoms?`}
+        answer={`It depends, but probably. No birth control is 100% effective, and multiple forms of birth control will provide better odds of preventing a pregnancy. Additionally, many other forms of birth control do not protect against STIs, condoms are one of the best ways to protect yourself from an STI.`}
+    />
+    <!-- <dl>
         <dt>If I'm on birth control, do I still need to use condoms?</dt>
         <dd>
             It depends, but probably. No birth control is 100% effective, and
@@ -94,5 +102,5 @@
             control do not protect against STIs, condoms are one of the best
             ways to protect yourself from an STI.
         </dd>
-    </dl>
+    </dl> -->
 </section>
