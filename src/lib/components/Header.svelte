@@ -28,9 +28,12 @@
                 class="main-nav-block"
                 class:open={navOpen === true}
             >
-                <div class="nav-item">Sex Ed</div>
-                <a class="nav-item" href="#">Item 2</a>
-                <a class="nav-item" href="#">Item 3</a>
+                <a class="nav-item" href="/" on:click={toggleNav}>Home</a>
+                <a class="nav-item" href="sex-ed/" on:click={toggleNav}
+                    >Sex Ed</a
+                >
+                <!-- <a class="nav-item" href="#" on:click={toggleNav}>Item 2</a>
+                <a class="nav-item" href="#" on:click={toggleNav}>Item 3</a> -->
             </div>
         </nav>
     {/if}
