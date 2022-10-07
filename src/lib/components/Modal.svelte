@@ -1,12 +1,20 @@
 <script>
     import { fade } from "svelte/transition";
     import "$lib/scss/_variables.scss";
-    import * as cookies from "$lib/js/cookies.js";
 
-    const createCookie = () => {
-        cookies.setCookie("liabilityCheck", "true", 365);
-        show = false;
-    };
+    // // Cookie Functions
+    // // @ts-ignore
+    // function setCookie(cookieName, cookieValue, daysUntilExpire) {
+    //     const d = new Date();
+    //     d.setTime(d.getTime() + daysUntilExpire * 24 * 60 * 60 * 1000);
+    //     let expires = "expires=" + d.toUTCString();
+    //     document.cookie = `${cookieName}=${cookieValue};${expires};path=/`;
+    // }
+
+    // const createCookie = () => {
+    //     cookies.setCookie("liabilityCheck", "true", 365);
+    //     show = false;
+    // };
 
     export let show = true;
 

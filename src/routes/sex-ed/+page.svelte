@@ -4,31 +4,34 @@
     import Modal from "$lib/components/Modal.svelte";
     import ResourceLink from "$lib/components/ResourceLink.svelte";
     import FaqItem from "$lib/components/FaqItem.svelte";
-    import * as cookies from "$lib/js/cookies.js";
 
-    let showModal = false;
+    // // Cookie Functions
+    // // @ts-ignore
+    // function getCookie(cookieName) {
+    //     var cookieArr = document.cookie.split(";");
+    //     for (var i = 0; i < cookieArr.length; i++) {
+    //         var cookiePair = cookieArr[i].split("=");
+    //         if (cookieName == cookiePair[0].trim()) {
+    //             return decodeURIComponent(cookiePair[1]);
+    //         }
+    //     }
+    //     return null;
+    // }
 
-    onMount(async () => {
-        let liabilityCheck = cookies.getCookie("liabilityCheck");
+    // let showModal = false;
 
-        // Check to see if liability waiver has been waived
-        if (liabilityCheck !== null) {
-            showModal = false;
-        } else {
-            showModal = true;
-        }
-    });
+    // onMount(async () => {
+
+    //     let liabilityCheck = cookies.getCookie("liabilityCheck");
+
+    //     // Check to see if liability waiver has been waived
+    //     if (liabilityCheck !== null) {
+    //         showModal = false;
+    //     } else {
+    //         showModal = true;
+    //     }
+    // });
 </script>
-
-{#if showModal}
-    <Modal
-        id={"modal-liability"}
-        title={"Liability Waiver"}
-        text={`<p>98221.org cannot and does not contain medical/health advice. <span class="parenthetical">Though some of the links do, and we believe in good medical science.</span> The medical/health information is provided for general informational and educational purposes only and is not a substitute for professional advice. Accordingly, before taking any actions based upon such information, we encourage you to consult with a the appropriate professionals. <span class="parenthetical">Medical physicians who are sex-positive, LGBTQIA+ friendly, trans-friendly, areligious, and private can be found the links on this page, though, again, we are providing NO advice.</span>  We do not provide any kind of medical/heath advice. <span class="parenthetical">&#10229; See, NO advice.</span>  THE USE OR RELIANCE OF ANY INFORMATION CONTAINED ON THE SITE IS SOLELY AT YOUR OWN RISK. <span class="parenthetical">Though, we're very happy you're here and hope you find the resources you are looking for.</span></p>`}
-        buttonText={"I Accept Responsibility"}
-        bind:show={showModal}
-    />
-{/if}
 
 <h1>Sex Ed</h1>
 
