@@ -92,6 +92,15 @@ p {
     }
 }
 
+// GENERIC Styles
+b {
+    font-weight: bold;
+}
+
+i {
+    font-style: italic;
+}
+
 .logo,
 .nav-item {
     font-family: $font-heading;
