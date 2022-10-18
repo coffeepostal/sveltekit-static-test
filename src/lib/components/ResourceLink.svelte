@@ -19,13 +19,16 @@
     {/each}
 
     {#if description}
-        <p>{description}</p>
+        <p>{@html description}</p>
     {/if}
     <hr />
 </article>
 
 <style lang="scss">
     article {
+        i {
+            font-style: italic;
+        }
     }
     hr {
         border: 1px solid $color-primary;

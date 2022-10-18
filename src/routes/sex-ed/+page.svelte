@@ -78,6 +78,17 @@
         ]}
         description={`Resources for parents, families, friends, and members of the LGBTQIA+ community.`}
     />
+    <ResourceLink
+        id={`anacortes-pride`}
+        title={`Anacortes Pride`}
+        links={[
+            {
+                url: `https://www.anacortespride.org`,
+                text: `Anacortes Pride Website`,
+            },
+        ]}
+        description={`Celebrating and bringing together the Anacortes LGBTQIA+ community. Bringing awareness to the need for diversity and inclusion in all forms, in support of liberation for all. <i>&mdash;Adapted from anacortespride.org</i>`}
+    />
 </section>
 <!-- <section id="education">
     <h2>Education</h2>
@@ -107,3 +118,6 @@
         </dd>
     </dl> -->
 </section>
+
+<style lang="scss">
+</style>
