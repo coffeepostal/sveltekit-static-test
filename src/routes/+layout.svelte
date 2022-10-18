@@ -39,7 +39,7 @@
     {/if}
     <div id="header-bar" class="header-bar">
         <div />
-        <div class="logo">98221.org</div>
+        <div class="logo"><a href="/">98221.org</a></div>
         <div id="menu-launcher" class="menu-launcher" on:click={toggleNav}>
             <div id="menu-hamburger" class:open={navOpen === true}>
                 <span />
